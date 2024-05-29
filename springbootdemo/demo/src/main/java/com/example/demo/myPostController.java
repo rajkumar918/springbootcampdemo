@@ -17,9 +17,11 @@ public class myPostController {
         RestClient rc = RestClient.create();
 
         Post response = rc.get().uri(url).retrieve().body(Post.class);
-        System.out.println("response :; " + response.getBody());
-        System.out.println("response :; " + response.getTitle());
-        System.out.println("response :; " + response.getId());
+        System.out.println("response : " + response.getBody());
+        System.out.println("response : " + response.getTitle());
+        System.out.println("response : " + response.getId());
+        System.out.println("Response user " + response.userid);
+        
         return response;
     }
 }
