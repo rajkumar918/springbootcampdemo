@@ -1,4 +1,7 @@
-FROM openjdk:17
-COPY ./target/demo-0.0.1-SNAPSHOT.jar ./demo-0.0.1-SNAPSHOT.jar
-EXPOSE 8899
-CMD ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
+FROM openjdk:21
+
+# Install the application dependencies
+EXPOSE 9901
+ADD target\demo.jar demo.jar
+
+CMD ["java","-jar","demo.jar"]
